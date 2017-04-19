@@ -65,3 +65,9 @@ C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap
 C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\obj\Debug\Bootstrap.csprojResolveAssemblyReference.cache
 C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\obj\Debug\Bootstrap.dll
 C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\obj\Debug\Bootstrap.pdb
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\bin\EntityFramework.dll
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\bin\EntityFramework.SqlServer.dll
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\bin\EntityFramework.xml
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\bin\EntityFramework.SqlServer.xml
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\obj\Debug\Bootstrap.Migrations.again.resources
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Bootstrap\Bootstrap\obj\Debug\Bootstrap.csproj.GenerateResource.Cache

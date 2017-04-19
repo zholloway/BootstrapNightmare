@@ -1,6 +1,4 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model Bootstrap.ViewModel.IndexVM
 
 <div class="jumbotron">
     <div class="row">
@@ -9,45 +7,96 @@
             <h5>&hearts; For the students of The Iron Yard</h5>
         </div>
         <div class="col-md-3">
-            <img src="~/Images/sports.jpg" class="img-circle" height="200px" width="200px"/>
-        </div>  
+            <img src="~/Images/sports.jpg" class="img-circle" height="200px" width="200px" />
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-            <img src="~/Images/football.jpg" class="img-responsive">
-            <div class="text-center">
-                <h3><strong>Football</strong></h3>
+<div class="row">  
+    @foreach (var item in Model.Sports)
+    {
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                @{
+                    var imageUrl = "/Images/" + item.Name.ToLower() + ".jpg";
+                }
+                <img src="@imageUrl" class="img-responsive">
+                <div class="text-center">
+                    <h3><strong>@item.Name</strong></h3>
+                </div>
             </div>
         </div>
-    </div>  
-    <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-            <img src="~/Images/baseball.jpg" class="img-responsive">
-            <div class="text-center">
-                <h3><strong>Baseball</strong></h3>
-            </div>
-        </div>
-    </div>  
-    <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-            <img src="~/Images/basketball.jpg" class="img-responsive">
-            <div class="text-center">
-                <h3><strong>Basketball</strong></h3>
-            </div>
-        </div>
-    </div>  
-    <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-            <img src="~/Images/quidditch.jpg" class="img-responsive">
-            <div class="text-center">
-                <h3><strong>Quidditch</strong></h3>
-            </div>
-        </div>
-    </div>    
+    }
 </div>
 
+<p></p>
+<p></p>
 
+<div class="alert alert-warning">
+    <p>We've added some brand new features in version 2.0!</p>
+    <a href="">Learn more</a>
+</div>
 
+<div class="well">
+    <span>
+        <span class="glyphicon glyphicon-user"></span>
+        Please <strong>log in</strong> to edit
+        <span class="pull-right">facebook</span>
+    </span>
+</div>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Teams
+            <span class="badge pull-right">@Model.Teams.Count teams</span>
+        </div>
+    </div>
+    @foreach (var team in Model.Teams)
+    {
+        <div class="panel panel-body">
+            <img class="img-responsive col-md-1" src="" />
+            <div class="col-md-9">
+                <h4>@team.Name</h4>
+                <span>Lorem ipsum whosywhatsitwhosywhatsitwhosywhatsitwhosywhatsitwhosywhatsitwhosywhatsitwhosywhatsitwhosywhatsit</span>
+            </div>
+            <div class="col-md-2">
+                <span class="badge pull-right">@team.NumberOfPlayers Players</span>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Games</div>
+
+    <!-- Table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Score</th>
+            </tr>
+            @foreach (var game in Model.Games) {
+                <tr>
+                    <td>
+                        <strong>@game.ID</strong>
+                    </td>
+                    <td>
+                        @game.HomeTeamID
+                    </td>
+                    <td>
+                        @game.AwayTeamID
+                    </td>
+                    <td>
+                        @game.Score
+                    </td>
+                </tr>
+            }
+        </thead>
+    </table>
+</div>
